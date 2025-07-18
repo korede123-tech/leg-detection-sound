@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ALAPRAXIS</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- TensorFlow + MoveNet scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+</head>
+<body>
+  <h1>ALAPRAXIS</h1>
+  <div class="video-wrapper">
+    <video id="webcam" autoplay playsinline muted></video>
+    <canvas id="canvas"></canvas>
+  </div>
+  <audio id="sound" src="sound.mp3"></audio>
+
+  <script src="legpose.js"></script>
+</body>
+</html>
