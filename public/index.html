@@ -4,20 +4,56 @@
   <meta charset="UTF-8">
   <title>ALAPRAXIS</title>
   <link rel="stylesheet" href="style.css">
-  
+
   <!-- TensorFlow + MoveNet scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 640px;
+      height: 480px;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    video {
+      display: none; /* hide raw video feed */
+    }
+  </style>
 </head>
 <body>
   <h1>ALAPRAXIS</h1>
+
   <div class="video-wrapper">
     <video id="webcam" autoplay playsinline muted></video>
     <canvas id="canvas"></canvas>
   </div>
-  <audio id="sound" src="sound.mp3"></audio>
+
+  <!-- Audio elements for different leg detections -->
+  <audio id="sound" src="Phillip1.mp3"></audio>     <!-- 2 legs -->
+  <audio id="sound1" src="Phillip2.mp3"></audio>   <!-- 4 legs -->
+  <audio id="sound2" src="Phillip3.mp3"></audio>   <!-- 6 legs -->
 
   <script src="legpose.js"></script>
 </body>
