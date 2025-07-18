@@ -27,7 +27,12 @@ async function init() {
   canvas.height = video.videoHeight;
   ctx = canvas.getContext('2d');
 
-  detector = await poseDetection.createDetector(poseDetection.SupportedModels.MoveNet);
+  detector = await poseDetection.createDetector(
+    poseDetection.SupportedModels.MoveNet,
+    {
+      modelType: poseDetection.movenet.modelType.MULTIPOSE_LIGHTNING
+    }
+  );
 
   detectPose();
 }
